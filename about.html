@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About — Sigerdu Industry Trade</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;1,500&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--void:#161310;--panel:#211c17;--gold:#c9a227;--goldL:#e0bd52;--bronze:#a8703f;--paper:#f0ebe0;--mid:#8a8070;--line:rgba(240,235,224,0.1);}
+body{background:var(--void);color:var(--paper);font-family:'Instrument Sans',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+
+.site-header{position:sticky;top:0;z-index:100;background:rgba(22,19,16,0.97);backdrop-filter:blur(8px);}
+.brand-row{padding:1.6rem 6% 1rem;display:flex;justify-content:center;align-items:center;gap:1rem;}
+.wreath{width:26px;height:26px;opacity:0.8;}
+.nb-name{font-family:'Bodoni Moda',serif;font-weight:600;font-size:1.5rem;letter-spacing:0.02em;}
+.link-row{display:flex;justify-content:center;gap:2rem;padding:0 6% 1.2rem;border-bottom:1px solid var(--gold);list-style:none;}
+.link-row a{font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);padding-bottom:0.8rem;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;}
+.link-row a:hover,.link-row a.active{color:var(--goldL);border-bottom-color:var(--gold);}
+
+/* HALL OF MERIT — medal-timeline of achievements, replaces generic about layout entirely */
+.page-hero{padding:4rem 6% 3rem;max-width:1000px;margin:0 auto;text-align:center;}
+.ph-tag{font-size:0.76rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;}
+.page-hero h1{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,3.8vw,3.4rem);font-weight:600;line-height:1.2;}
+.page-hero h1 em{font-style:italic;color:var(--goldL);}
+
+.hall-wrap{max-width:900px;margin:0 auto;padding:1rem 6% 6rem;display:flex;flex-direction:column;gap:1.4rem;}
+.merit-entry{display:grid;grid-template-columns:70px 1fr;gap:1.8rem;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1.6rem 1.8rem;}
+.merit-medal{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;position:relative;}
+.merit-medal::before{content:'';position:absolute;inset:5px;border:1px dashed rgba(201,162,39,0.4);border-radius:50%;}
+.merit-medal span{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--goldL);font-size:1.1rem;}
+.merit-entry h3{font-size:1.02rem;font-weight:600;margin-bottom:0.5rem;}
+.merit-entry p{font-size:0.87rem;color:var(--mid);line-height:1.75;}
+
+.btn-primary{display:inline-block;margin-top:0.6rem;padding:0.85rem 2rem;background:var(--gold);color:var(--void);border-radius:2px;font-size:0.8rem;font-weight:600;transition:background 0.2s;}
+.btn-primary:hover{background:var(--goldL);}
+
+footer{background:var(--panel);padding:4rem 6% 0;border-top:2px solid var(--gold);}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid var(--line);}
+.f-brand{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.9rem;}
+.f-col p{color:var(--mid);font-size:0.82rem;line-height:1.85;}
+.f-col h4{font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--goldL);margin-bottom:0.9rem;}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:0.45rem;}
+.f-col ul li,.f-col ul a,.f-col a{font-size:0.82rem;color:var(--mid);transition:color 0.2s;}
+.f-col ul a:hover{color:var(--goldL);}
+.footer-bottom{display:flex;justify-content:space-between;padding:1.4rem 0;font-size:0.68rem;color:rgba(240,235,224,0.3);flex-wrap:wrap;gap:0.5rem;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.6s,transform 0.6s;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:700px){.merit-entry{grid-template-columns:1fr;gap:0.9rem;text-align:center;}.merit-medal{margin:0 auto;}}
+@media(max-width:600px){.link-row{gap:1.2rem;flex-wrap:wrap;}.footer-top{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="brand-row">
+  <svg class="wreath" viewBox="0 0 26 26"><path d="M4 22 C4 14 8 8 13 8 C18 8 22 14 22 22" fill="none" stroke="#c9a227" stroke-width="1.4"/><circle cx="13" cy="6" r="2" fill="#c9a227"/></svg>
+  <div class="nb-name">Sigerdu</div>
+  <svg class="wreath" viewBox="0 0 26 26" style="transform:scaleX(-1);"><path d="M4 22 C4 14 8 8 13 8 C18 8 22 14 22 22" fill="none" stroke="#c9a227" stroke-width="1.4"/><circle cx="13" cy="6" r="2" fill="#c9a227"/></svg>
+</div>
+<ul class="link-row">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html" class="active">About</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="contact.html">Request a Quote</a></li>
+</ul>
+</header>
+
+<section class="page-hero">
+  <div class="ph-tag">Our Story</div>
+  <h1>Every merit, <em>earned.</em></h1>
+</section>
+
+<section class="hall-wrap reveal">
+  <div class="merit-entry"><div class="merit-medal"><span>I</span></div><div><h3>Founding Merit</h3><p>Sigerdu Industry Trade was founded on a simple standard: every order should be worth standing behind, without exception.</p></div></div>
+  <div class="merit-entry"><div class="merit-medal"><span>II</span></div><div><h3>Six Categories Awarded</h3><p>Full coverage established across machinery, steel, plastics, and more.</p></div></div>
+  <div class="merit-entry"><div class="merit-medal"><span>III</span></div><div><h3>30+ Countries Reached</h3><p>Our verified manufacturer network now spans more than thirty countries.</p></div></div>
+  <div class="merit-entry"><div class="merit-medal"><span>IV</span></div><div><h3>Standing Merit</h3><p>One business day response, held as our permanent standard.</p></div></div>
+  <div class="merit-entry"><div class="merit-medal"><span>V</span></div><div><h3>Home Ground</h3><p>Flat E19, 10/F, No.52 Hung To Road, Kwun Tong, Hong Kong<br/><a href="mailto:info@sigerduindustry.com" style="color:var(--goldL);">info@sigerduindustry.com</a></p></div></div>
+</section>
+
+<div style="text-align:center;padding:1rem 6% 5rem;">
+  <a href="contact.html" class="btn-primary">Request a Quote</a>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-brand"><svg class="wreath" viewBox="0 0 26 26"><path d="M4 22 C4 14 8 8 13 8 C18 8 22 14 22 22" fill="none" stroke="#e0bd52" stroke-width="1.4"/><circle cx="13" cy="6" r="2" fill="#e0bd52"/></svg><div class="nb-name">Sigerdu</div></div>
+      <p>Flat E19, 10/F, No.52 Hung To Road<br/>Kwun Tong, HKG</p>
+    </div>
+    <div class="f-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="f-col"><h4>Categories</h4><ul><li>Machinery</li><li>Spare Parts</li><li>Building Materials</li><li>Plastics</li><li>Steel</li><li>Auto Parts</li></ul></div>
+    <div class="f-col"><h4>Hours</h4><ul><li>Mon–Fri 9am–6pm HKT</li><li>Sat 9am–1pm HKT</li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 SIGERDU INDUSTRY TRADE LIMITED</p><p>KWUN TONG · HONG KONG</p></div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
